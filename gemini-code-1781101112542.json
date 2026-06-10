@@ -1,0 +1,16 @@
+{
+  "$schema": "https://railway.com/railway.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksPlan": {
+      "phases": {
+        "setup": {
+          "aptPkgs": ["chromium", "libatk1.0-0", "libnss3", "libxss1", "libasound2"]
+        }
+      }
+    }
+  },
+  "deploy": {
+    "startCommand": "python script.py"
+  }
+}
