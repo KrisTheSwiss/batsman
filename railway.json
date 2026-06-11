@@ -6,15 +6,11 @@
       "phases": {
         "setup": {
           "aptPkgs": ["chromium", "libatk1.0-0", "libnss3", "libxss1", "libasound2", "libgbm1"]
-        },
-        "build": {
-          "dependsOn": ["install"],
-          "cmds": ["python -m playwright install chromium"]
         }
       }
     }
   },
   "deploy": {
-    "startCommand": "python script.py"
+    "startCommand": "playwright install chromium && python script.py"
   }
 }
