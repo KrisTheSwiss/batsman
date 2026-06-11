@@ -33,6 +33,6 @@
     }
   },
   "deploy": {
-    "startCommand": "playwright install chromium && python script.py"
+    "startCommand": "export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true && playwright install chromium && python script.py"
   }
 }
